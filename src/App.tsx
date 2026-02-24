@@ -1,22 +1,23 @@
 ﻿import React from 'react'
+import { ShortVideosCarousel } from './ShortVideosCarousel'
 
 const assets = {
-  heroBg: "https://www.figma.com/api/mcp/asset/cea2d4a7-1b54-471c-b91f-a39853006a66",
-  ctaBg: "https://www.figma.com/api/mcp/asset/66837cc5-afae-4b05-8632-ed5969a3524e",
-  avatar1: "https://www.figma.com/api/mcp/asset/76d22265-29ed-4cb2-9660-2533eaf9a021",
-  avatar2: "https://www.figma.com/api/mcp/asset/c65942c5-da3e-4f51-bf63-06f927b2aea1",
-  avatar6: "https://www.figma.com/api/mcp/asset/5f343d4d-9c6e-47e8-87d6-3f594fbd3639",
-  avatar7: "https://www.figma.com/api/mcp/asset/16554828-5336-4a77-af9a-0946cb7b3587",
-  avatar8: "https://www.figma.com/api/mcp/asset/afe88bc7-6518-49a4-b1b0-8bfa8f4021f6",
-  avatar9: "https://www.figma.com/api/mcp/asset/c8e04d3c-ec94-4e70-b582-d174d38f18c3",
-  afterEffects: "https://www.figma.com/api/mcp/asset/5728a255-619d-4708-b124-534b69a9fb47",
-  photoshop: "https://www.figma.com/api/mcp/asset/00f4b35e-8886-4db3-8a77-6050e36dc378",
-  premiere: "https://www.figma.com/api/mcp/asset/3e65b73c-d2aa-4f1e-9a03-9456334f4eda",
-  illustrator: "https://www.figma.com/api/mcp/asset/735fbe97-57bc-4e41-bf0b-feeb3d2ba1f8",
-  xd: "https://www.figma.com/api/mcp/asset/cb83b241-d1ec-49a4-8a63-e6e9a1163b0b",
-  blender: "https://www.figma.com/api/mcp/asset/58d04ef1-b311-43d5-b080-e94c794c6ec5",
-  logo: "https://www.figma.com/api/mcp/asset/e5e1db0a-fd26-44d0-8e96-635175390845",
-  logoFooter: "https://www.figma.com/api/mcp/asset/24b736f6-d13a-429f-a68b-d5ba4332a787",
+  bg: "/public/assets/BG.png",
+  ctaBg: "/public/assets/BG.png",
+  avatar1: "/public/assets/LUCAS.png",
+  avatar2: "/public/assets/RENATO.png",
+  avatar6: "/public/assets/BRUNA.png",
+  avatar7: "/public/assets/JULIANA.png",
+  avatar8: "/public/assets/THIAGO.png",
+  avatar9: "/public/assets/GUSTAVO.png",
+  afterEffects: "/public/assets/Adobe After Effects.png",
+  photoshop: "/public/assets/Adobe Photoshop.png",
+  premiere: "/public/assets/Adobe Premiere.png",
+  illustrator: "/public/assets/Adobe Illustrator.png",
+  xd: "/public/assets/Adobe XD.png",
+  blender: "public/assets/Blender.png",
+  logo: "/public/assets/logo.svg",
+  logotipo: "/public/assets/logotipo.svg",
 }
 
 const toolIcons = [
@@ -31,22 +32,28 @@ const toolIconsLoop = Array.from({ length: 4 }, () => toolIcons).flat()
 
 const shortVideos = [
   {
-    title: 'Hook imediato e ritmo forte',
+    title: 'Reel 1',
     description:
-      'Shorts construídos para prender nos primeiros segundos com cortes precisos, punch-ins e sequência visual dinâmica.',
-    vimeoId: '578793501',
+      'Conteúdo profissional e impactante.',
+    vimeoId: '1166956585',
   },
   {
-    title: 'Legendas e motion que guiam o olhar',
+    title: 'Reel 2',
     description:
-      'Tipografia animada e elementos visuais que deixam a mensagem clara mesmo sem áudio.',
-    vimeoId: '578793501',
+      'Produção de alta qualidade e criatividade.',
+    vimeoId: '1166514565',
   },
   {
-    title: 'Criativos prontos para tráfego',
+    title: 'Reel 3',
     description:
-      'Variações de CTA, texto e ritmo para testar e escalar nos anúncios.',
-    vimeoId: '578793501',
+      'Edição precisa e efeitos visuais dinâmicos.',
+    vimeoId: '1107751041',
+  },
+  {
+    title: 'Reel 4',
+    description:
+      'Storytelling envolvente e motion design impecável.',
+    vimeoId: '1107750879',
   },
 ]
 
@@ -305,7 +312,7 @@ export default function App() {
         <section className="relative min-h-[760px] overflow-hidden bg-[#0b3b44] text-white">
           <div className="absolute inset-0">
             <img
-              src={assets.heroBg}
+              src={assets.bg}
               alt=""
               className="h-full w-full object-cover"
             />
@@ -378,29 +385,8 @@ export default function App() {
               Shorts.
             </p>
 
-            <div className="mt-12 grid w-full gap-8 md:grid-cols-3">
-              {shortVideos.map((video) => (
-                <article
-                  key={video.title}
-                  className="flex flex-col gap-5 rounded-2xl bg-sand p-4 text-left shadow-sm"
-                >
-                  <div className="relative">
-                    <VimeoEmbed
-                      id={video.vimeoId}
-                      title={video.title}
-                      aspect="short"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-semibold text-ink">
-                      {video.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-ink/70">
-                      {video.description}
-                    </p>
-                  </div>
-                </article>
-              ))}
+            <div className="mt-12 w-full">
+              <ShortVideosCarousel videos={shortVideos} VimeoEmbed={VimeoEmbed} />
             </div>
           </div>
         </section>
@@ -680,7 +666,7 @@ export default function App() {
       <footer id="rodape" className="bg-ocean px-6 py-14 text-white">
         <div className="mx-auto grid w-full max-w-6xl gap-10 md:grid-cols-[1.2fr_0.8fr_0.6fr]">
           <div>
-            <img src={assets.logoFooter} alt="MK Vision" className="h-12" />
+            <img src={assets.logotipo} alt="MK Vision" className="h-12" />
             <p className="mt-6 max-w-sm text-sm text-white/80">
               A MK Vision é um estúdio de edição e animação que transforma ideias
               em vídeos de impacto. Criamos conteúdo para YouTube, VSLs,

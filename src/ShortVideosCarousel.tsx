@@ -8,7 +8,7 @@ interface Video {
 
 interface ShortVideosCarouselProps {
   videos: Video[]
-  VimeoEmbed: React.ComponentType<{ id: string; title: string; aspect: string }>
+  VimeoEmbed: React.ComponentType<{ id: string; title: string; aspect?: 'short' | 'video' }>
 }
 
 export function ShortVideosCarousel({ videos, VimeoEmbed }: ShortVideosCarouselProps) {

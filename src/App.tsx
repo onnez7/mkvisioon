@@ -2,22 +2,22 @@
 import { ShortVideosCarousel } from './ShortVideosCarousel'
 
 const assets = {
-  bg: "/public/assets/BG.png",
-  ctaBg: "/public/assets/BG.png",
-  avatar1: "/public/assets/LUCAS.png",
-  avatar2: "/public/assets/RENATO.png",
-  avatar6: "/public/assets/BRUNA.png",
-  avatar7: "/public/assets/JULIANA.png",
-  avatar8: "/public/assets/THIAGO.png",
-  avatar9: "/public/assets/GUSTAVO.png",
-  afterEffects: "/public/assets/Adobe After Effects.png",
-  photoshop: "/public/assets/Adobe Photoshop.png",
-  premiere: "/public/assets/Adobe Premiere.png",
-  illustrator: "/public/assets/Adobe Illustrator.png",
-  xd: "/public/assets/Adobe XD.png",
-  blender: "public/assets/Blender.png",
-  logo: "/public/assets/logo.svg",
-  logotipo: "/public/assets/logotipo.svg",
+  bg: "/assets/bg.png",
+  ctaBg: "/assets/bg.png",
+  avatar1: "/assets/lucas.png",
+  avatar2: "/assets/renato.png",
+  avatar6: "/assets/bruna.png",
+  avatar7: "/assets/juliana.png",
+  avatar8: "/assets/thiago.png",
+  avatar9: "/assets/gustavo.png",
+  afterEffects: "/assets/adobe-after-effects.png",
+  photoshop: "/assets/adobe-photoshop.png",
+  premiere: "/assets/adobe-premiere.png",
+  illustrator: "/assets/adobe-illustrator.png",
+  xd: "/assets/adobe-xd.png",
+  blender: "/assets/blender.png",
+  logo: "/assets/logo.svg",
+  logotipo: "/assets/logotipo.svg",
 }
 
 const toolIcons = [

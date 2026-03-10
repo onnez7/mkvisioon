@@ -32,27 +32,27 @@ const toolIconsLoop = Array.from({ length: 4 }, () => toolIcons).flat()
 
 const shortVideos = [
   {
-    title: 'Reel 1',
+    title: 'Lettering em Espanhol',
     description:
-      'Conteúdo profissional e impactante.',
+      'Lettering em espanhol com legendas dinâmicas e animadas para reforçar a mensagem e manter a atenção.',
     vimeoId: '1166956585',
   },
   {
-    title: 'Reel 2',
+    title: 'Lettering em Português',
     description:
-      'Produção de alta qualidade e criatividade.',
-    vimeoId: '1166514565',
+      'Lettering em português com legendas animadas, leitura clara e ritmo pensado para retenção.',
+    vimeoId: '1172032851',
   },
   {
-    title: 'Reel 3',
+    title: 'Motion Checkout Zedy',
     description:
-      'Edição precisa e efeitos visuais dinâmicos.',
+      'Motion design do checkout da Zedy, destacando oferta, interface e apresentação visual do produto.',
     vimeoId: '1107751041',
   },
   {
-    title: 'Reel 4',
+    title: 'Motion Checkout CartPanda',
     description:
-      'Storytelling envolvente e motion design impecável.',
+      'Motion design do checkout da CartPanda, com foco em clareza visual, dinâmica e valorização da experiência.',
     vimeoId: '1107750879',
   },
 ]
@@ -401,21 +401,21 @@ export default function App() {
                 Vídeos longos com retenção real
               </h2>
               <p className="mt-4 text-sm text-ink/70 md:text-base">
-                Storytelling, ritmo e clareza para manter o público assistindo e
-                conduzir a audiência até a ação. Perfeito para YouTube, VSLs e
-                apresentações de produto.
+                Este vídeo mostra o trabalho completo da MK Vision, reunindo os
+                principais serviços em uma apresentação com narrativa, ritmo e
+                retenção do começo ao fim.
               </p>
               <div className="mt-6 space-y-3 text-sm text-ink/70">
-                <p>• Estrutura narrativa focada em retenção e conversão.</p>
-                <p>• Motion e textos que reforçam a mensagem-chave.</p>
-                <p>• Identidade visual consistente do início ao fim.</p>
+                <p>• Visão geral dos serviços e da qualidade de execução.</p>
+                <p>• Storytelling e pacing pensados para segurar atenção.</p>
+                <p>• Edição, motion e identidade visual aplicados no mesmo vídeo.</p>
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <VimeoEmbed id="760316775" title="Exemplo de vídeo longo" />
+              <VimeoEmbed id="1172032506" title="Exemplo de vídeo longo" />
               <div className="rounded-2xl bg-sand p-4 text-sm text-ink/70">
-                Dica: substitua este vídeo por outros exemplos longos quando
-                quiser mostrar variedade de estilos ou segmentos.
+                Vídeo longo com retenção real, mostrando o portfólio completo e
+                como cada serviço ganha forma em entregas profissionais.
               </div>
             </div>
           </div>
